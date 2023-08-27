@@ -53,24 +53,13 @@ void AppCallBack(uint32 event, void* eventParam)
     } 
 } 
 
+int enable_deepsleep = 1;
 inline void RunApplication() 
 { 
-    /*********************************************************************** 
-    *  Place your application code here 
-    ************************************************************************/   
- 
-    /* if you are done with everything and ready to go to sleep,  
-    then set it up to go to sleep. Update the code inside if() specific 
-    to your application*/   
-    if(0)  
-    { 
-        applicationPower = SLEEP; 
-    } 
-     
     /* if you are done with everything and ready to go to deepsleep,  
     then set it up to go to deepsleep. Update the code inside if() specific 
     to your application*/   
-    if (1) 
+    if ( enable_deepsleep == 1 ) 
     { 
         applicationPower = DEEPSLEEP; 
     } 
